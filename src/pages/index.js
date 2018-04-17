@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import frontpage from '../img/SnowSun.jpg'
+import quote from '../img/quote1.svg'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -8,17 +10,28 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <section className="section">
+      <section className="section"  
+        style={{ backgroundImage: `url(${quote})`, backgroundRepeat: 'repeat', backgroundAttachment: 'scroll'
+        ,backgroundPosition: "center center" }}>
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Welcome to Claudine Del Rosario's Blog!</h1>
+            <h1 className="has-text-weight-bold is-size-4">Welcome to Claudine Del Rosario's Blog!</h1>
+          </div>
+          <div className="columns">
+
+            <div className="column is-3">
+              <img src={frontpage} alt="Instagram" />
+            </div>
+            <p className="column subtitle is-9">
+            Scroll down for blog posts!
+            </p>
           </div>
           {posts
             .filter(post => post.node.frontmatter.templateKey === 'blog-post')
             .map(({ node: post }) => (
               <div
                 className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                style={{  padding: '2em 4em', backgroundColor: 'rgb(255, 245, 245)' }}
                 key={post.id}
               >
                 <p>

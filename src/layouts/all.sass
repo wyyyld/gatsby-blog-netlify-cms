@@ -1,8 +1,20 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+
+@import "~bulma"
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+h1,.navbar, .heading-font
+  font-family: 'Libre Baskerville', serif
+
+body
+  font-family: 'Work Sans', sans-serif;  
+
+
 // Config vars
 $kaldi-red: #FFA8A8
-$kaldi-red-invert: #FFCECE
+$kaldi-red-invert: #E14848
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
@@ -22,12 +34,22 @@ $primary-invert: $kaldi-red-invert
     margin-bottom: 1.5rem
     margin-top: 0
 
+.navbar
+  background: $primary
+  .navbar-item
+    color: white
+  .navbar-item:hover
+    color: black
+
+.has-text-primary
+  color: $primary-invert !important
+
 // Helper Classes
 .full-width-image-container
-  width: 100vw
-  height: 400px
+  width: 66vw
+  height: 80vh
   position: relative
-  left: 50%
+  left: 60%
   right: 50%
   margin: 5em -50vw
   background-size: cover
@@ -38,5 +60,12 @@ $primary-invert: $kaldi-red-invert
 
 .margin-top-0
   margin-top: 0 !important
+  
 
-@import "~bulma"
+.padding-top-0
+  padding-top: 0 !important
+
+
+.logo
+  -webkit-filter: invert(100%);
+  filter: invert(100%);

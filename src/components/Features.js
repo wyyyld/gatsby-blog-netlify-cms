@@ -2,18 +2,37 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
-    {gridItems.map(item => (
-      <div key={item.image} className="column is-6">
-        <section className="section">
-          <p className="has-text-centered">
-            <img alt="" src={item.image} />
-          </p>
+  <div>
+    {gridItems.map((item,index) => (
+      <section key={index} className="section">
+      <div className="content">
+      {index % 2 === 0 &&
+      <div className="columns content"             
+      style={{  padding: '2em 4em', backgroundColor: 'rgb(255, 245, 245)' }}>
+          <div className="column">
+          <img alt="" src={item.image} />
+          </div>
+          <div className="column is-8">
           <p>{item.text}</p>
-        </section>
+          </div>     
       </div>
+      }
+      {index % 2 !== 0 &&
+      <div className="columns content"             
+      style={{  padding: '2em 4em', backgroundColor: 'rgb(255, 245, 245)' }}>
+        <div className="column is-8">
+          <p>{item.text}</p>
+          </div>    
+          <div className="column">
+          <img alt="" src={item.image} />
+          </div>
+      </div>
+      }
+      </div>
+      </section>
     ))}
-  </div>
+    </div>
+
 )
 
 FeatureGrid.propTypes = {

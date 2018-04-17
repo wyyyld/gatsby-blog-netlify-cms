@@ -1,17 +1,15 @@
 ---
-templateKey: 'product-page'
-path: /products
-title: Our Coffee
-image: /img/SnowSun.jpg
-heading: What we offer
+templateKey: 'projects-page'
+path: /projects
+title: Projects
+image: /img/candid_cow.jpg
+heading: Current Projects
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Take a look at my past projects and scroll down for current projects.
+  Please contact me if you have any questions or inquires!
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/somcan.png
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a

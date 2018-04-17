@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
+import quote from '../img/quote2.svg'
 
 export const ProductPageTemplate = ({
   image,
@@ -15,21 +16,23 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
-  <section className="section section--gradient">
+  <section className="section section--gradient padding-top-0"
+  style={{ backgroundImage: `url(${quote})`, backgroundRepeat: 'repeat', backgroundAttachment: 'scroll'
+  ,backgroundPosition: "center center" }}>
     <div className="container">
-      <div className="section">
+      <div className="section padding-top-0">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
               <div
-                className="full-width-image-container margin-top-0"
+                className="column is-12 full-width-image-container"
                 style={{ backgroundImage: `url(${image})` }}
               >
                 <h2
-                  className="has-text-weight-bold is-size-1"
+                  className="is-size-1 heading-font"
                   style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
+                    boxShadow: '0.5rem 0 0 #FFA8A8, -0.5rem 0 0 #FFA8A8',
+                    backgroundColor: '#FFA8A8',
                     color: 'white',
                     padding: '1rem',
                   }}
@@ -39,7 +42,7 @@ export const ProductPageTemplate = ({
               </div>
               <div className="columns">
                 <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-2">
+                  <h3 className="has-text-weight-semibold heading-font is-size-2">
                     {heading}
                   </h3>
                   <p>{description}</p>
